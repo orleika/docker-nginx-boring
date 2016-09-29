@@ -3,7 +3,7 @@ FROM debian
 MAINTAINER orleika "orleika.net@gmail.com"
 
 RUN apt-get update && \
-apt-get install git make cmake wget libpcre3 libpcre3-dev zlib1g-dev libgd-dev libgd2-xpm-dev libgd-gd2-perl build-essential libpng12-dev libjpeg-dev -y && \
+apt-get install git make cmake wget libpcre3 libpcre3-dev zlib1g-dev libgd-dev libgd2-xpm-dev libgd-gd2-perl build-essential libpng12-dev libjpeg-dev golang -y && \
 cd /usr/local/src && \
 git clone https://boringssl.googlesource.com/boringssl && \
 cd boringssl && \
