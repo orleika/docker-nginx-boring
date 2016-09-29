@@ -4,14 +4,12 @@ MAINTAINER orleika "orleika.net@gmail.com"
 
 RUN apt-get update && \
 apt-get install git make cmake wget libpcre3 libpcre3-dev zlib1g-dev libgd-dev libgd2-xpm-dev libgd-gd2-perl build-essential libpng12-dev libjpeg-dev golang -y && \
-
 useradd -s /sbin/nologin nginx && \
 mkdir -p /var/{log,run}/nginx && \
 mkdir -p /var/lib/nginx/body && \
 chown nginx:nginx /var/{log,run}/nginx/ && \
-
 cd /usr/local/src && \
-wget https://nginx.org/download/nginx-1.11.4.tar.gz && tar zxf nginx-1.11.4.tar.gz\
+wget https://nginx.org/download/nginx-1.11.4.tar.gz && tar zxf nginx-1.11.4.tar.gz && \
 git clone https://boringssl.googlesource.com/boringssl && \
 cd boringssl && mkdir build && cd build && cmake ../ && make && cd ../ && \
 mkdir -p .openssl/lib && cd .openssl && ln -s ../include . && cd ../ && \
