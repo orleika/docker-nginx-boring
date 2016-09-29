@@ -21,7 +21,7 @@ mkdir -p /var/lib/nginx/body && \
 chown nginx:nginx /var/{log,run}/nginx/ && \
 wget https://nginx.org/download/nginx-1.11.4.tar.gz && \
 tar zxf nginx-1.11.4.tar.gz && \
-cd nginx-1.11.4 && \
+cd /usr/local/src/nginx-1.11.4 && \
 ./configure --prefix=/usr/share/nginx \
 --sbin-path=/usr/sbin/nginx \
 --conf-path=/etc/nginx/nginx.conf \
