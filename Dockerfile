@@ -19,6 +19,7 @@ useradd -s /sbin/nologin nginx && \
 mkdir -p /var/{log,run}/nginx && \
 mkdir -p /var/lib/nginx/body && \
 chown nginx:nginx /var/{log,run}/nginx/ && \
+cd /usr/local/src/ && \
 wget https://nginx.org/download/nginx-1.11.4.tar.gz && \
 tar zxf nginx-1.11.4.tar.gz && \
 cd /usr/local/src/nginx-1.11.4 && \
